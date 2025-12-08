@@ -1,0 +1,17 @@
+# Module build directory
+/build/
+
+# C++/NDK related
+.cxx/
+.externalNativeBuild/
+
+# Navigation safe args (generated code)
+navigation.json
+
+# Compose compiler artifacts (if module produces metrics)
+compose-metrics/
+compose-reports/
+
+# Generated files from kapt or KSP
+kapt/
+ksp/
