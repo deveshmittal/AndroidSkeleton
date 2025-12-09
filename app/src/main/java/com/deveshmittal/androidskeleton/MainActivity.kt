@@ -28,40 +28,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MaterialTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { paddingInfo ->
-                    val textField = rememberTextFieldState()
-                    Column{
-                        TextField(
-                            state = textField,
-                            modifier = Modifier.semantics{
-                                contentType = ContentType.EmailAddress
-                            }
-                        )
-                        Text(
-                            text = "${textField.text}",
-                            modifier = Modifier.size(24.dp)
-                        )
-                    }
 
-                }
-            }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AndroidSkeletonTheme {
-        Greeting("Android")
     }
 }
