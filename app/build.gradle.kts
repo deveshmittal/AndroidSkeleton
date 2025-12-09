@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.diagnostics.DependencyReportTask
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -90,3 +92,21 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
+
+
+tasks.register<DependencyReportTask>("debugRuntimeClasspathReport") {
+    group = "help"
+    description = "Writes the debugRuntimeClasspath dependency tree to dependencies/debugRuntimeClasspathReport.txt"
+
+    // Use ONLY this configuration
+    configurations = setOf(
+        project.configurations.getByName("debugRuntimeClasspath")
+    )
+
+    // Output location (inside app/)
+    outputFile = project.layout.projectDirectory.file(
+        "dependencies/debugRuntimeClasspathReport.txt"
+    ).asFile
+}
+
+
