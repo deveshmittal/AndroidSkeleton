@@ -19,6 +19,8 @@ navigation = "2.9.6"
 retrofit = "3.0.0"
 moshi = "1.15.2"
 coil3 = "3.3.0"
+kotlinxImmutable = "0.4.0"
+
 
 [libraries]
 # Core + base
@@ -36,6 +38,9 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 
 # Navigation
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+
+# Kotlinx collections
+kotlinx-collections-immutable = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinxImmutable" }
 
 # Compose BOM + core
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
