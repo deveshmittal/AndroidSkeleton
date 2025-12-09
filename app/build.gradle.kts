@@ -71,10 +71,11 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
 
-    // Networking: Retrofit + Moshi
+    // Networking: Retrofit + Gson
     implementation(libs.retrofit)
-    implementation(libs.retrofit.moshi)
-    implementation(libs.moshi.kotlin)
+    implementation(libs.retrofit.gson.converter)
+    implementation(libs.gson)
+
     implementation(libs.kotlinx.collections.immutable)
 
     // Images: Coil Compose
