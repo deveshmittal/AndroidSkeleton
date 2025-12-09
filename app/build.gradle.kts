@@ -75,6 +75,7 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.moshi)
     implementation(libs.moshi.kotlin)
+    implementation(libs.kotlinx.collections.immutable)
 
     // Images: Coil Compose
     implementation(libs.coil.compose)
