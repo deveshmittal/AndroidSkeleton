@@ -1,6 +1,8 @@
 package com.deveshmittal.androidskeleton.data
 
+import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
+import kotlinx.collections.immutable.ImmutableList
 
 
 @Stable
@@ -12,5 +14,5 @@ data class Earthquake (
 
 @Stable
 data class EarthquakeList(
-    val eqList: List<Earthquake>
+    val eqList: ImmutableList<Earthquake>
 )
